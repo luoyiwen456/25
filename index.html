@@ -18,7 +18,17 @@
     height: 40px;
     background-color: red;
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    font-size: 28px;
+  }
+
+  li {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
   }
 </style>
 
@@ -33,7 +43,11 @@
     <li>7</li>
     <li>8</li>
     <li>9</li>
+    <li>10</li>
   </ul>
 </body>
+<script>
+  var arr = document.getElementsByTagName("li")[0];
+</script>
 
 </html>
