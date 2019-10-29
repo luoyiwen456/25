@@ -53,7 +53,28 @@
   </ul>
 </body>
 <script>
-  var arr = document.getElementsByTagName("li")[0];
+  var lis = document.getElementsByTagName("li");
+
+
+  function init() {
+    for (var i = 0; i < lis.length; i++) {
+      lis[i].style.backgroundColor = "red";
+    }
+  }
+  var count = 0;
+  var countTime = setInterval(function () {
+    init();
+    if (count > lis.length - 1) {
+      count = 0;
+    }
+    changeColor(count);
+    count++;
+  }, 100)
+
+
+  function changeColor(a) {
+    lis[a].style.backgroundColor = "blue";
+  }
 </script>
 
 </html>
