@@ -36,23 +36,33 @@
     background-color: #fff;
   }
 
+
+
+
+
+
   .choujiangUl {
     display: flex;
     flex-wrap: wrap;
     width: 300px;
     height: 300px;
-    border: 1px solid red;
     margin: 10px auto;
     list-style: none;
+    background-image: url(images/bg_03.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
   }
 
   .choujiangUl li {
     width: 100px;
     height: 100px;
     box-sizing: border-box;
-    border: 1px solid darkolivegreen;
-    background-color: #fff;
+    /* border: 1px solid darkolivegreen; */
+    /* background-color: #fff; */
   }
+
+
 
   .loading {
     position: absolute;
@@ -113,7 +123,9 @@
   }
 
   @keyframes gun {
-    0% {}
+    0% {
+      left: 50px;
+    }
 
     25% {
       left: 25px;
@@ -127,7 +139,9 @@
       left: 25px;
     }
 
-    100% {}
+    100% {
+      left: 50px;
+    }
   }
 
   .loading .month {
@@ -163,6 +177,7 @@
 </style>
 
 <body>
+
   <ul class="nav">
     <li>0</li>
     <li>1</li>
@@ -177,17 +192,21 @@
     <li>10</li>
   </ul>
 
-  <ul class="choujiangUl">
-    <li class="choujiang-item"><img src="" alt=""></li>
-    <li class="choujiang-item"><img src="" alt=""></li>
-    <li class="choujiang-item"><img src="" alt=""></li>
-    <li class="choujiang-item"><img src="" alt=""></li>
-    <li class="choujiang-item"><img src="" alt=""></li>
-    <li class="choujiang-item"><img src="" alt=""></li>
-    <li class="choujiang-item"><img src="" alt=""></li>
-    <li class="choujiang-item"><img src="" alt=""></li>
-    <li class="choujiang-item"><img src="" alt=""></li>
-  </ul>
+
+  <div class="bg">
+    <ul class="choujiangUl">
+      <li class="choujiang-item"><img src="" alt=""></li>
+      <li class="choujiang-item"><img src="" alt=""></li>
+      <li class="choujiang-item"><img src="" alt=""></li>
+      <li class="choujiang-item"><img src="" alt=""></li>
+      <li class="choujiang-item"><img src="" alt=""></li>
+      <li class="choujiang-item"><img src="" alt=""></li>
+      <li class="choujiang-item"><img src="" alt=""></li>
+      <li class="choujiang-item"><img src="" alt=""></li>
+      <li class="choujiang-item"><img src="" alt=""></li>
+    </ul>
+  </div>
+
 
   <div class="loading">
     <div class="eye"><span class="eyeball"></span></div>
