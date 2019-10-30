@@ -61,7 +61,7 @@
     width: 100px;
     height: 100px;
     background-color: rosybrown;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -104,10 +104,30 @@
   }
 
   .loading .eye span {
+    position: absolute;
     width: 20px;
     height: 20px;
     background-color: #000;
     border-radius: 10px;
+    animation: gun 2s linear infinite;
+  }
+
+  @keyframes gun {
+    0% {}
+
+    25% {
+      left: 25px;
+    }
+
+    50% {
+      left: 50px;
+    }
+
+    75% {
+      left: 25px;
+    }
+
+    100% {}
   }
 
   .loading .month {
@@ -115,6 +135,30 @@
     height: 15px;
     background-color: #fff;
     border-radius: 7.5px;
+  }
+
+  .loading::before {
+    content: "";
+    width: 40px;
+    height: 20px;
+    background-color: rosybrown;
+    position: absolute;
+    border-radius: 10px;
+    top: -20px;
+    left: 20px;
+    transform: rotateZ(45deg);
+  }
+
+  .loading::after {
+    content: "";
+    width: 40px;
+    height: 20px;
+    background-color: rosybrown;
+    position: absolute;
+    border-radius: 10px;
+    top: -20px;
+    left: 45px;
+    transform: rotateZ(-45deg);
   }
 </style>
 
@@ -169,7 +213,6 @@
     changeColor(count);
     count++;
   }, 1000)
-
 
   function changeColor(a) {
     lis[a].style.backgroundColor = "blue";
